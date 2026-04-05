@@ -1,6 +1,6 @@
 # ai-ui-dev-loop
 
-![CI](https://github.com/zacariahtatar/ai-ui-dev-loop/actions/workflows/ci.yml/badge.svg?branch=main)
+![CI](https://github.com/Zacaria/ai-ui-dev-loop/actions/workflows/ci.yml/badge.svg?branch=master)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 ![Node](https://img.shields.io/badge/node-22.15.1-339933?logo=node.js&logoColor=white)
 ![pnpm](https://img.shields.io/badge/pnpm-10.20.0-F69220?logo=pnpm&logoColor=white)

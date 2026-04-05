@@ -5,7 +5,7 @@ This repository includes a static GitHub Pages site published from `docs/` by [`
 Expected project-page URL for this repository shape:
 
 - `https://<owner>.github.io/<repo>/`
-- for `zacariahtatar/ai-ui-dev-loop`, that is typically `https://zacariahtatar.github.io/ai-ui-dev-loop/`
+- for `Zacaria/ai-ui-dev-loop`, that is typically `https://zacaria.github.io/ai-ui-dev-loop/`
 
 ## One external action you may need
 
@@ -15,4 +15,4 @@ If the Pages workflow runs but the site does not publish, the exact repository-l
 2. Go to `Settings -> Pages`.
 3. Set the source to `GitHub Actions`.
 
-After that, pushes to `main` can publish the explainer automatically.
+After that, pushes to the default branch can publish the explainer automatically.
