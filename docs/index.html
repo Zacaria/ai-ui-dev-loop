@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AI UI Dev Loop</title>
+    <meta
+      name="description"
+      content="A public explainer for ai-ui-dev-loop: why AI-assisted UI loops matter, what this repo demonstrates, and how to use the live demo and local workflows."
+    />
+    <link rel="stylesheet" href="./site.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">AI-assisted UI development loop</p>
+          <h1>Build faster feedback loops between code, browser behavior, and AI.</h1>
+          <p class="lede">
+            <code>ai-ui-dev-loop</code> is a demo-first template for verifying UI
+            changes through a deterministic browser surface, Playwright checks,
+            and MCP-driven observability.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://dev-loop-beta.vercel.app">Open live demo</a>
+            <a class="button button-secondary" href="https://github.com/zacariahtatar/ai-ui-dev-loop">Open repository</a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <img
+            src="./assets/dev-loop.png"
+            alt="The dev-loop page showing deterministic interaction controls and token swatches."
+          />
+          <div class="hero-panel-caption">
+            The demo page exposes stable controls for console, network, color, and interaction checks.
+          </div>
+        </div>
+      </header>
+
+      <main class="content-grid">
+        <section class="card card-accent">
+          <h2>Why this exists</h2>
+          <p>
+            Most UI work still relies on manually bouncing between code, browser state,
+            and screenshots. This repo shows a tighter loop: a browser surface designed
+            for automation, a reproducible local activation path, and a verifier that proves
+            console, network, and computed-style signals are actually observable.
+          </p>
+          <ul class="checklist">
+            <li>Deterministic UI surface at <code>/dev-loop</code></li>
+            <li>Playwright E2E for the baseline user flow</li>
+            <li>Sidecar MCP verification for console, network, and style observability</li>
+            <li>Public demo plus local-first activation and troubleshooting docs</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>What you can do with it</h2>
+          <div class="split-list">
+            <div>
+              <h3>Use it as a template</h3>
+              <p>
+                Start from a minimal Next.js + shadcn setup that already has stable automation hooks,
+                a theme toggle, and browser-facing verification patterns.
+              </p>
+            </div>
+            <div>
+              <h3>Use it as a reference</h3>
+              <p>
+                Study how a repo can separate readiness checks, app tests, public demo publication,
+                and repo-owned MCP verification without conflating them.
+              </p>
+            </div>
+            <div>
+              <h3>Use it as a demo</h3>
+              <p>
+                Try the hosted app immediately, then inspect how the same interactions are validated locally.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>How to use it</h2>
+          <ol class="steps">
+            <li>
+              <strong>Try the hosted demo.</strong>
+              Open <a href="https://dev-loop-beta.vercel.app">the public Vercel demo</a> and visit
+              <code>/dev-loop</code>.
+            </li>
+            <li>
+              <strong>Activate the local loop.</strong>
+              Run <code>pnpm activate</code> from the repo root.
+            </li>
+            <li>
+              <strong>Verify browser observability.</strong>
+              Start the app with <code>pnpm dev</code>, then run <code>pnpm mcp:verify</code>.
+            </li>
+          </ol>
+          <pre class="code-block"><code>pnpm activate
+pnpm dev
+pnpm e2e
+pnpm mcp:verify</code></pre>
+        </section>
+
+        <section class="card">
+          <h2>Supported paths</h2>
+          <div class="path-grid">
+            <article>
+              <h3>Public demo</h3>
+              <p>Use the hosted app when you want immediate hands-on access without setup.</p>
+              <a href="https://dev-loop-beta.vercel.app">https://dev-loop-beta.vercel.app</a>
+            </article>
+            <article>
+              <h3>Repository docs</h3>
+              <p>Use the README and knowledge docs for commands, troubleshooting, and implementation context.</p>
+              <a href="https://github.com/zacariahtatar/ai-ui-dev-loop">Repository home</a>
+            </article>
+            <article>
+              <h3>Local verification</h3>
+              <p>Use Playwright for app behavior and the MCP sidecar for observability-specific checks.</p>
+              <span><code>pnpm e2e</code> and <code>pnpm mcp:verify</code></span>
+            </article>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>What the verifier proves</h2>
+          <p>
+            The sidecar MCP verifier is the repo-owned observability contract. It does not depend on Codex-native
+            MCP transport being available in your environment.
+          </p>
+          <ul class="checklist">
+            <li>Console signals are emitted and captured</li>
+            <li>A deterministic network probe reaches <code>/api/health?probe=dev-loop</code></li>
+            <li>Computed colors change when the theme changes</li>
+            <li>Failure categories are explicit: config, tooling, or assertion</li>
+          </ul>
+        </section>
+
+        <section class="card card-accent">
+          <h2>GitHub Pages setup note</h2>
+          <p>
+            This site is published from the tracked <code>docs/</code> directory through a GitHub Actions workflow.
+            If the workflow does not publish on first run, the exact repository-level action is:
+          </p>
+          <p class="callout">
+            In GitHub, open <strong>Settings → Pages</strong> and set the source to <strong>GitHub Actions</strong>.
+          </p>
+          <p>
+            After that, pushes to the default branch can publish the explainer automatically.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

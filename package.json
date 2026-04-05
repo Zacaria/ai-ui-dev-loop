@@ -1,0 +1,24 @@
+{
+  "name": "ai-ui-dev-loop",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@10.20.0",
+  "scripts": {
+    "activate": "node scripts/activate-ai-loop.mjs",
+    "doctor:loop": "node scripts/activate-ai-loop.mjs --no-install",
+    "live-demo:doctor": "node scripts/live-demo.mjs prereqs",
+    "live-demo:deploy": "node scripts/live-demo.mjs deploy-preview",
+    "live-demo:verify": "node scripts/live-demo.mjs verify",
+    "dev": "pnpm -C apps/web dev",
+    "build": "pnpm -C apps/web build",
+    "start": "pnpm -C apps/web start",
+    "lint": "pnpm -C apps/web lint",
+    "e2e": "pnpm -C apps/web e2e",
+    "mcp:verify": "pnpm -C apps/web mcp:verify",
+    "mcp:dev-loop": "pnpm mcp:verify",
+    "validate": "pnpm lint && pnpm build && pnpm e2e",
+    "assets:demo": "pnpm -C apps/web demo:media",
+    "assets:tree": "node scripts/generate-repo-tree.mjs",
+    "assets:all": "pnpm run assets:demo && pnpm run assets:tree"
+  }
+}

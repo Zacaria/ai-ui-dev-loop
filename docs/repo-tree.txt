@@ -1,0 +1,108 @@
+ai-ui-dev-loop/
+|-- .codex/
+|   |-- prompts/
+|   |   |-- opsx-apply.md
+|   |   |-- opsx-archive.md
+|   |   |-- opsx-bulk-archive.md
+|   |   |-- opsx-continue.md
+|   |   |-- opsx-explore.md
+|   |   |-- opsx-ff.md
+|   |   |-- opsx-new.md
+|   |   |-- opsx-onboard.md
+|   |   |-- opsx-sync.md
+|   |   `-- opsx-verify.md
+|   `-- skills/
+|       |-- openspec-apply-change/
+|       |-- openspec-archive-change/
+|       |-- openspec-bulk-archive-change/
+|       |-- openspec-continue-change/
+|       |-- openspec-explore/
+|       |-- openspec-ff-change/
+|       |-- openspec-new-change/
+|       |-- openspec-onboard/
+|       |-- openspec-sync-specs/
+|       `-- openspec-verify-change/
+|-- .github/
+|   |-- ISSUE_TEMPLATE/
+|   |   |-- bug_report.md
+|   |   |-- config.yml
+|   |   `-- feature_request.md
+|   |-- workflows/
+|   |   |-- ci.yml
+|   |   `-- pages.yml
+|   `-- pull_request_template.md
+|-- .history/
+|   |-- .gitignore_20260114170806
+|   |-- .gitignore_20260202231615
+|   |-- CODE_OF_CONDUCT_20260202224421.md
+|   |-- CODE_OF_CONDUCT_20260202231431.md
+|   |-- LICENSE_20260202224356
+|   |-- LICENSE_20260202231415
+|   |-- SECURITY_20260202224426.md
+|   |-- SECURITY_20260202231450.md
+|   `-- SECURITY_20260202231453.md
+|-- apps/
+|   `-- web/
+|       |-- .vercel/
+|       |-- app/
+|       |-- components/
+|       |-- e2e/
+|       |-- lib/
+|       |-- public/
+|       |-- scripts/
+|       |-- .gitignore
+|       |-- components.json
+|       |-- eslint.config.mjs
+|       |-- next-env.d.ts
+|       |-- next.config.ts
+|       |-- package.json
+|       |-- playwright.config.ts
+|       |-- postcss.config.mjs
+|       |-- README.md
+|       `-- tsconfig.json
+|-- docs/
+|   |-- assets/
+|   |   |-- dev-loop.png
+|   |   `-- dev-loop.svg
+|   |-- .nojekyll
+|   |-- 404.html
+|   |-- github-pages.md
+|   |-- index.html
+|   |-- live-demo-publication.md
+|   |-- repo-tree.txt
+|   `-- site.css
+|-- knowledge/
+|   |-- browser-feedback-loop.md
+|   `-- codex-playwright-mcp.md
+|-- openspec/
+|   |-- changes/
+|   |   |-- archive/
+|   |   `-- publish-github-pages-site/
+|   |-- specs/
+|   |   |-- ai-browser-feedback-loop/
+|   |   |-- ci-test-pipeline/
+|   |   |-- fresh-clone-activation/
+|   |   |-- live-demo-publication/
+|   |   |-- repo-readiness/
+|   |   `-- web-ui-template/
+|   |-- config.yaml
+|   `-- project.md
+|-- scripts/
+|   |-- activate-ai-loop.mjs
+|   |-- generate-repo-tree.mjs
+|   `-- live-demo.mjs
+|-- .editorconfig
+|-- .gitignore
+|-- .nvmrc
+|-- .tool-versions
+|-- AGENTS.md
+|-- CHANGELOG.md
+|-- CODE_OF_CONDUCT.md
+|-- CONTRIBUTING.md
+|-- Justfile
+|-- LICENSE
+|-- package.json
+|-- pnpm-lock.yaml
+|-- pnpm-workspace.yaml
+|-- README.md
+`-- SECURITY.md
